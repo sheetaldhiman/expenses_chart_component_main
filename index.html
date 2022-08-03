@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.0/chart.js"></script>
+        <link href="CSS/style.css" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans&family=Outfit&display=swap" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&family=Outfit&display=swap" rel="stylesheet">
+
+        <link rel="icon" type="image/x-icon" href="Images/favicon-32x32.png">
+
+        <title>Frontend Mentor | Expenses chart component</title>
+
+    </head>
+    <body>
+        <div class="container">
+            <div class="expenses-chart">
+                <div class="balance">
+                    <div class="balance-text">
+                        <p>My balance</p>
+                        <h2>$921.48</h2>
+                    </div>
+                    <div class="balance-img">
+                        <img src="Images/logo.svg" alt="balance icon">
+                    </div>
+                </div>
+                <div class="spending-bar-chart">
+                    <h2>Spending - Last 7 days</h2>
+                     <canvas id="myChart" style="width: 100%; max-width: 600px;"></canvas>
+                    <script>
+                        var day = ["mon","tue","wed","thu","fri","sat","sun"];
+                        var amount = [17.45,34.91,52.36,31.07,23.39,43.28,25.48];
+                        var barColors = ["hsl(10, 79%, 65%)","hsl(10, 79%, 65%)","hsl(186, 34%, 60%)","hsl(10, 79%, 65%)","hsl(10, 79%, 65%)","hsl(10, 79%, 65%)","hsl(10, 79%, 65%)"];
+                        
+                        new Chart("myChart", {
+                            type: "bar",
+                            data: {
+                                labels: day,
+                                datasets: [{
+                                    backgroundColor: barColors,
+                                    data: amount,
+                                    borderRadius: 5,
+                                    borderSkipped: false,
+                                }]
+                            },
+                            options: {
+                                plugins: {
+                                    legend: {display: false}
+                                },
+                                title: {
+                                    display: false,
+                                },
+                                scales: {
+                                     x: {
+                                        grid: {
+                                            display: false,
+                                            drawBorder: false
+                                                }
+                                            },
+                                    y: {
+                                        ticks: {
+                                                display: false,
+                                        },
+                                        grid: {
+                                            display: false,
+                                            drawBorder: false
+                                        }
+                                    }
+                                }
+                            }
+                        });
+                    </script>
+                    
+                    <div class="amount">
+                        <div class="amount-this">
+                            <p>Total this month</p>
+                            <h1>$478.33</h1>
+                        </div>
+                        <div class="amount-last">
+                            <h6>+2.4%</h6>
+                            <p>from last month</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
