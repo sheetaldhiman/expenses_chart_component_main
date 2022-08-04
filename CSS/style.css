@@ -1,0 +1,124 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f7e9dc;
+}
+
+.container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.expenses-chart {
+    width: 400px;
+    height: 520px;
+    display: grid;
+}
+
+.balance {
+    background-color: hsl(10, 79%, 65%);
+    border-radius: 10px;
+    width: 380px;
+    height: 90px;
+    margin-top: 1rem;
+    margin: 0 auto;
+    display: flex;
+}
+
+.balance-text {
+    width: 50%;
+}
+
+.balance-text p{
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    color: hsl(27, 66%, 92%);
+    margin: 1rem 1rem 0.5rem 1rem;
+}
+
+.balance-text h2 {
+    font-family: 'DM Sans', sans-serif;
+    color: hsl(27, 66%, 92%);
+    margin: 0.5rem 1rem 1rem 1rem;
+}
+
+.balance-img {
+        width: 50%;
+        display: flex;
+        justify-content: right;
+}
+
+.balance-img img {
+    width: 50%;
+    padding: 15px;
+    margin-right: 20px;
+}
+
+.spending-bar-chart {
+    padding: 11px;
+    margin: 0 auto;
+    width: 380px;
+    height: 60vh;
+    background-color: white;
+    border-radius: 10px;
+    font-family: 'DM Sans', sans-serif;
+}
+
+#myChart {
+    cursor: pointer;
+}
+
+.spending-bar-chart h2 {
+    margin: 1.5rem;
+    font-family: 'DM Sans', sans-serif;
+    color: hsl(25, 47%, 15%);
+}
+
+.amount {
+    margin: 0 auto;
+    padding: 10px;
+    border-top: 1px solid #b2afaa;
+    margin-top: 0.5rem;
+}
+.amount-this {
+    width: 50%;
+    float: left;
+    
+}
+.amount-this p{
+    color: #b2afaa;
+    font-size: 11px;
+    font-family: 'DM Sans', sans-serif;
+    margin-top: 1rem;
+}
+
+.amount-this h1 {
+    font-family: 'DM Sans', sans-serif;
+}
+
+.amount-last {
+    width: 50%;
+    display: grid;
+    justify-content: right;
+    padding: 5px;
+    top: 14px;
+    text-align: right;
+    position: relative;
+}
+.amount-last h6 {
+    font-family: 'DM Sans', sans-serif;
+}
+
+.amount-last p{
+    color: #b2afaa;
+    font-size: 11px;
+    font-family: 'DM Sans', sans-serif;
+    margin-top: 1rem;
+}
